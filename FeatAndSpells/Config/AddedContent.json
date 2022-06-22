@@ -1,0 +1,14 @@
+﻿{
+  "NewSettingsOffByDefault": false,
+  "Toys": {
+    "DisableAll": false,
+    "Settings": {
+      "WeightLimit": {
+        "Enabled": true,
+        "Homebrew": false,
+        "Description": "Add unlimited weight limit."
+      }
+    },
+    "IsExpanded": true
+  }
+  }

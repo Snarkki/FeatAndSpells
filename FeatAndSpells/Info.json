@@ -1,0 +1,14 @@
+﻿{
+  "AssemblyName": "FeatAndSpells.dll",
+  "Author": "Ossi",
+  "DisplayName": "FeatAndSpells",
+  "EntryMethod": "FeatAndSpells.Main.Load",
+  "GameVersion": "1.3.0",
+  "HomePage": "",
+  "Id": "FeatAndSpells",
+  "ManagerVersion": "0.23.0",
+  "Repository": "",
+  "Requirements": [ "TabletopTweaks-Core" ],
+  "LoadAfter": [ "TabletopTweaks-Core" ],
+  "Version": "1.2.0"
+}
