@@ -16,6 +16,7 @@ using Kingmaker.Blueprints;
 using Kingmaker.UnitLogic.FactLogic;
 using Kingmaker.Blueprints.Classes.Selection;
 using Kingmaker.Utility;
+using Kingmaker.Blueprints.Classes.Spells;
 
 namespace FeatAndSpells.Classes {
 
@@ -27,8 +28,58 @@ namespace FeatAndSpells.Classes {
         }
 
 
-        public static void AddTemplar()
-        {
+        public static void AddTemplar() {
+
+               Blueprints.Abilities.FlameStrike.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 5);
+            Blueprints.Abilities.CureLightWoundsMass.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 5);
+            Blueprints.Abilities.BreakEnchantment.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 5);
+            Blueprints.Abilities.RighteousMight.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 5);
+            Blueprints.Abilities.TrueSeeing.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 5);
+            Blueprints.Abilities.Banishment.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 5);
+            Blueprints.Abilities.SacredNimbus.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 5);
+            Blueprints.Abilities.SpellResistance.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 5);
+            Blueprints.Abilities.CommandGreater.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 5);
+            Blueprints.Abilities.StoneskinCommunal.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 5);
+
+
+               Blueprints.Abilities.BlessingOfLuckAndResolveMass.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 6);
+            Blueprints.Abilities.Harm.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 6);
+               Blueprints.Abilities.Heal.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 6);
+               Blueprints.Abilities.LitanyofMadness.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 6);
+               Blueprints.Abilities.CureModerateWoundsMass.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 6);
+               Blueprints.Abilities.DispelMagicGreater.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 6);
+               Blueprints.Abilities.BladeBarrier.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 6);
+               Blueprints.Abilities.InspiringRecovery.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 6);
+
+
+               Blueprints.Abilities.Arbitrament.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 7);
+               Blueprints.Abilities.CureSeriousWoundsMass.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 7);
+               Blueprints.Abilities.SummonMonsterVIIBase.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 7);
+               Blueprints.Abilities.Destruction.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 7);
+               Blueprints.Abilities.RestorationGreater.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 7);
+               Blueprints.Abilities.Blasphemy.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 7);
+               Blueprints.Abilities.WavesOfEctasy.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 7);
+               Blueprints.Abilities.HolyWord.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 7);
+               Blueprints.Abilities.Resurrection.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 7);
+
+
+
+               Blueprints.Abilities.HolyAura.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 8);
+               Blueprints.Abilities.FireStorm.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 8);
+               Blueprints.Abilities.ShieldOfLaw.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 8);
+               Blueprints.Abilities.FrightfulAspect.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 8);
+               Blueprints.Abilities.CureCriticalWoundsMass.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 8);
+               Blueprints.Abilities.Stormbolts.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 8);
+               Blueprints.Abilities.SummonMonsterVIIIBase.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 8);
+
+
+
+                Blueprints.Abilities.OverwhelmingPresence.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 9);
+                Blueprints.Abilities.HealMass.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 9);
+                Blueprints.Abilities.WindsOfVengeance.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 9);
+                Blueprints.Abilities.SummonMonsterIXBase.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 9);
+
+
 
             var TemplarSpellBook = BloodragerSpellBook.CreateCopy(FASContext, "TemplarSpellBook", bp => {
                 bp.Name = Helpers.CreateString(FASContext, "TemplarSpellBook.Name", "Templar Spellbook");
@@ -36,6 +87,10 @@ namespace FeatAndSpells.Classes {
                 bp.m_CharacterClass = CharacterClasses.PaladinClass.ToReference<BlueprintCharacterClassReference>();
                 bp.IsArcane = false;
             });
+
+            SpellBooks.AngelIncorporateSpellbook.m_AllowedSpellbooks = SpellBooks.AngelIncorporateSpellbook.m_AllowedSpellbooks.AppendToArray(TemplarSpellBook.ToReference<BlueprintSpellbookReference>());
+
+
 
 
             var TemplarArchetype = Helpers.CreateBlueprint<BlueprintArchetype>(FASContext, "TemplarArchetype", bp => {
@@ -61,7 +116,7 @@ namespace FeatAndSpells.Classes {
                   //  Helpers.CreateLevelEntry(11, FighterArmorTraining),
                      Helpers.CreateLevelEntry(12, FighterFeatSelection),
                   // Helpers.CreateLevelEntry(13, FighterWeaponTrainingRankUp),
-                     Helpers.CreateLevelEntry(6, FighterFeatSelection),
+                     Helpers.CreateLevelEntry(14, FighterFeatSelection),
                   //  Helpers.CreateLevelEntry(15, FighterArmorTraining),
                   //  Helpers.CreateLevelEntry(17, FighterWeaponTrainingRankUp),
                      Helpers.CreateLevelEntry(20, FighterFeatSelection),
@@ -85,6 +140,8 @@ namespace FeatAndSpells.Classes {
             FASContext.Logger.LogHeader("Changed Templar");
 
         }
+
+
     }
 }
 

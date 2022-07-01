@@ -144,6 +144,9 @@ namespace FeatAndSpells.Blueprints {
         public static BlueprintFeature RangedLegerdemainFeature = BlueprintTools.GetBlueprint<BlueprintFeature>("d99bab42783d29f48870274fb1e85bc4");
         public static BlueprintFeature FullCasterFeature = BlueprintTools.GetBlueprint<BlueprintFeature>("9fc9813f569e2e5448ddc435abf774b3");
 
+        public static BlueprintFeature TricksterAthleticsTier1Feature = ResourcesLibrary.TryGetBlueprint<BlueprintFeature>("b7de8e5e4d67faf4791866966afc0a43");
+        public static BlueprintFeature TricksterAthleticsTier2Feature = ResourcesLibrary.TryGetBlueprint<BlueprintFeature>("198b6abf58a36404f8189787a082fa02");
+        public static BlueprintFeature TricksterAthleticsTier3Feature = ResourcesLibrary.TryGetBlueprint<BlueprintFeature>("e45bf795c4f84c3b8a83c011f8580491");
 
     }
 }

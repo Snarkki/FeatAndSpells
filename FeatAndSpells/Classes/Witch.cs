@@ -33,7 +33,7 @@ namespace FeatAndSpells.Classes {
                 Blueprints.Abilities.Displacement.ToReference<BlueprintAbilityReference>(),
                 Blueprints.Abilities.ShadowConjuration.ToReference<BlueprintAbilityReference>(),
                 Blueprints.Abilities.ShadowEvocation.ToReference<BlueprintAbilityReference>(),
-                Blueprints.Abilities.PhantasmalPutrefication.ToReference<BlueprintAbilityReference>(),
+                Blueprints.Abilities.PhantasmalPutrefaction.ToReference<BlueprintAbilityReference>(),
                 Blueprints.Abilities.ShadowConjurationGreater.ToReference<BlueprintAbilityReference>(),
                 Blueprints.Abilities.ShadowEvocationGreater.ToReference<BlueprintAbilityReference>(),
                 Blueprints.Abilities.Weird.ToReference<BlueprintAbilityReference>(),

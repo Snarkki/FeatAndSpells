@@ -22,7 +22,14 @@ namespace FeatAndSpells.Classes {
 
 
         public static void ChangeCrusader() {
-            CrusaderArchetype.m_ReplaceSpellbook = SpellBooks.ClericSpellbook.ToReference<BlueprintSpellbookReference>();
+
+            var CrusaderNewSpellbook = OracleSpellbook.CreateCopy(FASContext, "CrusaderNewSpellbook", bp => {
+                bp.Name = Helpers.CreateString(FASContext, "CrusaderNewSpellbook.Name", "Crusader Spellbook");
+                bp.m_CharacterClass = CharacterClasses.OracleClass.ToReference<BlueprintCharacterClassReference>();
+                bp.CastingAttribute = Kingmaker.EntitySystem.Stats.StatType.Wisdom;
+            });
+
+            CrusaderArchetype.m_ReplaceSpellbook = CrusaderNewSpellbook.ToReference<BlueprintSpellbookReference>();
             CrusaderArchetype.RemoveFeatures = new LevelEntry[] { };
         }
     }

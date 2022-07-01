@@ -26,6 +26,7 @@ namespace FeatAndSpells.Blueprints {
 
         public static BlueprintSpellbook PaladinSpellbook = BlueprintTools.GetBlueprint<BlueprintSpellbook>("bce4989b070ce924b986bf346f59e885");
         public static BlueprintSpellbook ClericSpellbook = BlueprintTools.GetBlueprint<BlueprintSpellbook>("4673d19a0cf2fab4f885cc4d1353da33");
+        public static BlueprintSpellbook OracleSpellbook = BlueprintTools.GetBlueprint<BlueprintSpellbook>("6c03364712b415941a98f74522a81273");
         public static BlueprintSpellbook BardSpellBook = BlueprintTools.GetBlueprint<BlueprintSpellbook>("bc04fc157a8801d41b877ad0d9af03dd");
         public static BlueprintSpellsTable SorcererSpellPerDay = BlueprintTools.GetBlueprint<BlueprintSpellsTable>("dbff16956df2eda48a1da5c9617cc836");
         public static BlueprintSpellsTable SorcererSpellKnown = BlueprintTools.GetBlueprint<BlueprintSpellsTable>("d232bc78d967a964bac4d4d38e7ca5f4");
@@ -38,6 +39,7 @@ namespace FeatAndSpells.Blueprints {
         public static BlueprintSpellbook WizardSpellbook = BlueprintTools.GetBlueprint<BlueprintSpellbook>("5a38c9ac8607890409fcb8f6342da6f4");
         public static BlueprintSpellbook AccursedSpellBook = BlueprintTools.GetBlueprint<BlueprintSpellbook>("b897fe0947e4b804082b1a687c21e6e2");
         public static BlueprintSpellbook BloodragerSpellBook = BlueprintTools.GetBlueprint<BlueprintSpellbook>("e19484252c2f80e4a9439b3681b20f00");
+        public static BlueprintSpellbook AngelSpellBook = BlueprintTools.GetBlueprint<BlueprintSpellbook>("015658ac45811b843b036e4ccc96c772");
 
         public static BlueprintSpellList PaladinSpellList = BlueprintTools.GetBlueprint<BlueprintSpellList>("9f5be2f7ea64fe04eb40878347b147bc");
 
@@ -73,6 +75,7 @@ namespace FeatAndSpells.Blueprints {
 
 
         public static BlueprintFeatureSelectMythicSpellbook LichIncorporareSpellBookFeature = BlueprintTools.GetBlueprint<BlueprintFeatureSelectMythicSpellbook>("3f16e9caf7c683c40884c7c455ed26af");
+        public static BlueprintFeatureSelectMythicSpellbook AngelIncorporateSpellbook = BlueprintTools.GetBlueprint<BlueprintFeatureSelectMythicSpellbook>("e1fbb0e0e610a3a4d91e5e5284587939");
 
     }
 }

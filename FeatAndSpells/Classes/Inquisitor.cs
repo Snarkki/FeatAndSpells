@@ -23,7 +23,7 @@ namespace FeatAndSpells.Classes {
     {
 
         public static BlueprintAiAttack AttackAiAction = BlueprintTools.GetBlueprint<BlueprintAiAttack>("866ffa6c34000cd4a86fb1671f86c7d8");
-        public static BlueprintAiAttack MirrorImageAiAction = BlueprintTools.GetBlueprint<BlueprintAiAttack>("fd46f0f75324dcb418c2758cf3c582a9");
+        public static BlueprintAiCastSpell MirrorImageAiAction = BlueprintTools.GetBlueprint<BlueprintAiCastSpell>("fd46f0f75324dcb418c2758cf3c582a9");
 
         public static void ChangeHandler() {
             //AddGrandInquisitor();

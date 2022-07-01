@@ -56,11 +56,11 @@ namespace FeatAndSpells.Spells {
         public static void AddSpells() {
             
             HurricaneBow.Range = AbilityRange.Close;
-            GreatFang.AddToSpellList(SpellTools.SpellList.ClericSpellList, 5);
-            GreatFang.AddToSpellList(SpellTools.SpellList.WitchSpellList, 5);
-            GreatFang.AddToSpellList(SpellTools.SpellList.ShamanSpelllist, 5);
-            MageArmour.AddToSpellList(SpellTools.SpellList.MagusSpellList, 1);
-            MageArmour.AddToSpellList(SpellTools.SpellList.AlchemistSpellList, 1);
+            MagicFangGreater.AddToSpellList(SpellTools.SpellList.ClericSpellList, 5);
+            MagicFangGreater.AddToSpellList(SpellTools.SpellList.WitchSpellList, 5);
+            MagicFangGreater.AddToSpellList(SpellTools.SpellList.ShamanSpelllist, 5);
+            MageArmor.AddToSpellList(SpellTools.SpellList.MagusSpellList, 1);
+            MageArmor.AddToSpellList(SpellTools.SpellList.AlchemistSpellList, 1);
             Echolocation.AddToSpellList(SpellTools.SpellList.RangerSpellList, 4);
             Eaglesoul.AddToSpellList(SpellTools.SpellList.RangerSpellList, 4);
             HealMass.AddToSpellList(SpellTools.SpellList.WitchSpellList, 9);
