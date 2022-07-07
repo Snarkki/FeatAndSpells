@@ -148,5 +148,8 @@ namespace FeatAndSpells.Blueprints {
         public static BlueprintFeature TricksterAthleticsTier2Feature = ResourcesLibrary.TryGetBlueprint<BlueprintFeature>("198b6abf58a36404f8189787a082fa02");
         public static BlueprintFeature TricksterAthleticsTier3Feature = ResourcesLibrary.TryGetBlueprint<BlueprintFeature>("e45bf795c4f84c3b8a83c011f8580491");
 
+        public static BlueprintFeature TricksterKnowledgeArcanaTier1Feature = ResourcesLibrary.TryGetBlueprint<BlueprintFeature>("c7bb946de7454df4380c489a8350ba38");
+        public static BlueprintFeature TricksterKnowledgeArcanaTier2Feature = ResourcesLibrary.TryGetBlueprint<BlueprintFeature>("7bbd9f681440a294382b527a554e419d");
+        public static BlueprintFeature TricksterKnowledgeArcanaTier3Feature = ResourcesLibrary.TryGetBlueprint<BlueprintFeature>("5e26c673173e423881e318d2f0ae84f0");
     }
 }

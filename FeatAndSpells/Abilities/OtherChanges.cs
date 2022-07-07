@@ -19,12 +19,15 @@ using static FeatAndSpells.Main;
 using Kingmaker.Designers.Mechanics.Buffs;
 using Kingmaker.UnitLogic.FactLogic;
 using Kingmaker.UnitLogic.Buffs.Components;
+using Kingmaker.ElementsSystem;
+using Kingmaker.UnitLogic.Mechanics.Actions;
 
 namespace FeatAndSpells.Abilities {
     internal class OtherChanges {
 
         public static BlueprintBuff AscendentsummonBuff = BlueprintTools.GetBlueprint<BlueprintBuff>("3db4a1f9ffa46e7469f817bced1a0df2");
         public static BlueprintBuff SickenedBuffSubstition = BlueprintTools.GetBlueprint<BlueprintBuff>("4e42460798665fd4cb9173ffa7ada323");
+        public static BlueprintBuff Shaken = BlueprintTools.GetBlueprint<BlueprintBuff>("25ec6cb6ab1845c48a95f9c20b034220");
         public static BlueprintFeature AnimalCompanionSmilodonUpgrade = BlueprintTools.GetBlueprint<BlueprintFeature>("f1e949c3d93fc234da255b94629c5b3a");
         public static BlueprintFeatureSelection mythictalents = BlueprintTools.GetBlueprint<BlueprintFeatureSelection>("ba0e5a900b775be4a99702f1ed08914d");
         public static BlueprintFeatureSelection mythicextratalents = BlueprintTools.GetBlueprint<BlueprintFeatureSelection>("8a6a511c55e67d04db328cc49aaad2b8");
@@ -42,13 +45,21 @@ namespace FeatAndSpells.Abilities {
 
         private static void AddTricksterFeats() {
 
-            mythictalents.m_AllFeatures = mythictalents.m_AllFeatures.AppendToArray(TricksterAthleticsTier1Feature.ToReference<BlueprintFeatureReference>(),
+            mythictalents.m_AllFeatures = mythictalents.m_AllFeatures.AppendToArray(
+                TricksterAthleticsTier1Feature.ToReference<BlueprintFeatureReference>(),
                 TricksterAthleticsTier2Feature.ToReference<BlueprintFeatureReference>(),
-                TricksterAthleticsTier3Feature.ToReference<BlueprintFeatureReference>()
+                TricksterAthleticsTier3Feature.ToReference<BlueprintFeatureReference>(),
+                TricksterKnowledgeArcanaTier1Feature.ToReference<BlueprintFeatureReference>(),
+                TricksterKnowledgeArcanaTier2Feature.ToReference<BlueprintFeatureReference>(),
+                TricksterKnowledgeArcanaTier3Feature.ToReference<BlueprintFeatureReference>()
                 );
-            mythicextratalents.m_AllFeatures = mythictalents.m_AllFeatures.AppendToArray(TricksterAthleticsTier1Feature.ToReference<BlueprintFeatureReference>(),
+            mythicextratalents.m_AllFeatures = mythictalents.m_AllFeatures.AppendToArray(
+                TricksterAthleticsTier1Feature.ToReference<BlueprintFeatureReference>(),
                 TricksterAthleticsTier2Feature.ToReference<BlueprintFeatureReference>(),
-                TricksterAthleticsTier3Feature.ToReference<BlueprintFeatureReference>()
+                TricksterAthleticsTier3Feature.ToReference<BlueprintFeatureReference>(),
+                TricksterKnowledgeArcanaTier1Feature.ToReference<BlueprintFeatureReference>(),
+                TricksterKnowledgeArcanaTier2Feature.ToReference<BlueprintFeatureReference>(),
+                TricksterKnowledgeArcanaTier3Feature.ToReference<BlueprintFeatureReference>()
                 );
         }
 
@@ -62,7 +73,22 @@ namespace FeatAndSpells.Abilities {
         }
 
         private static void FixUnstoppable() {
+
+            var contextRemove =  Helpers.Create<ContextActionRemoveSelf>();
+
             SickenedBuffSubstition.AddComponent<RemoveWhenCombatEnded>();
+            SickenedBuffSubstition.m_Flags = BlueprintBuff.Flags.RemoveOnRest;
+            SickenedBuffSubstition.AddComponent<CombatStateTrigger>(c => {
+                c.CombatEndActions = new ActionList {
+                    Actions = new GameAction[] { contextRemove }
+                };
+            });
+            Shaken.AddComponent<RemoveWhenCombatEnded>();
+            Shaken.AddComponent<CombatStateTrigger>(c => {
+                c.CombatEndActions = new ActionList {
+                    Actions = new GameAction[] { contextRemove }
+                };
+            });
         }
 
         private static void buffAscendentSummon() {
