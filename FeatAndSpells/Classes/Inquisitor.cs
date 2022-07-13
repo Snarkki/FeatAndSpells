@@ -97,8 +97,12 @@ namespace FeatAndSpells.Classes {
                 );
 
 
-            MonsterTactician.RemoveFeatures = new LevelEntry[] { 
+            MonsterTactician.RemoveFeatures = new LevelEntry[] {
             };
+
+            SacredHuntsmanArchetype.AddFeatures = MonsterTactician.AddFeatures.AppendToArray(
+                    Helpers.CreateLevelEntry(1, WayOfTheOwl)
+            );
 
             MonsterTactician.AddFeatures = MonsterTactician.AddFeatures.AppendToArray(
                     Helpers.CreateLevelEntry(1, FighterProfiencies, WayOfTheOwl ),
