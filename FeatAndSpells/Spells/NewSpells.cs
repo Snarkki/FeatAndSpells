@@ -187,7 +187,7 @@ namespace FeatAndSpells.Spells {
             });
 
             LongArmAbility.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 1);
-            LongArmAbility.AddToSpellList(SpellTools.SpellList.InquisitorSpellList, 1);
+            //LongArmAbility.AddToSpellList(SpellTools.SpellList.InquisitorSpellList, 1);
         }
 
 

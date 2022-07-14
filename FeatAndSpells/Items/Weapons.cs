@@ -48,7 +48,7 @@ namespace FeatAndSpells.Items {
         public static void Handler() {
             //CarsomyrNewWeaponType();
             AddKingMakerItems();
-            CreateHolyDeterrence();
+            //CreateHolyDeterrence();
             CreateLongbowRudeStopper();
             Create1hOverThrow();
             CreateCarsomyr3();
@@ -161,7 +161,6 @@ namespace FeatAndSpells.Items {
                 var actions = comp.Action.Actions.OfType<ContextActionDispelMagic>().First();
                 actions.CheckBonus = 3;
                 actions.OnlyTargetEnemyBuffs = true;
-
             });
 
 
@@ -184,6 +183,29 @@ namespace FeatAndSpells.Items {
                 loot.m_Item = new LootItem() {
                     m_Type = LootItemType.Item,
                     m_Item = Carsomyr3.ToReference<BlueprintItemReference>(),
+                    m_Loot = null
+                };
+                loot.m_Count = 1;
+            });
+
+            var HolyDeterrence3 = ColdIronFauchard.CreateCopy<BlueprintItemWeapon>(FASContext, "HolyDeterrence3", bp => {
+                bp.SetName(FASContext, "Deterrence +3");
+                bp.SetDescription(FASContext, "When this Holy +3 Fauchard hits, you try to dispel one buff from enemy.");
+                bp.m_Cost = 50000;
+                bp.CR = 15;
+                bp.TrashLootTypes = new TrashLootType[0];
+                bp.m_Icon = SerpentPrinceFauchItem.Icon;
+                bp.m_Enchantments = new BlueprintWeaponEnchantmentReference[] {
+                    Enhancement3.ToReference<BlueprintWeaponEnchantmentReference>(),
+                    GraspOfCarsomyr3.ToReference<BlueprintWeaponEnchantmentReference>(),
+                    DeterrenceEnchament.ToReference<BlueprintWeaponEnchantmentReference>()
+                };
+            });
+
+            C3_ExoticTrader.AddComponent<LootItemsPackFixed>(loot => {
+                loot.m_Item = new LootItem() {
+                    m_Type = LootItemType.Item,
+                    m_Item = HolyDeterrence3.ToReference<BlueprintItemReference>(),
                     m_Loot = null
                 };
                 loot.m_Count = 1;
@@ -231,6 +253,30 @@ namespace FeatAndSpells.Items {
                 };
                 loot.m_Count = 1;
             });
+
+            var HolyDeterrence5 = ColdIronFauchard.CreateCopy<BlueprintItemWeapon>(FASContext, "HolyDeterrence5", bp => {
+                bp.SetName(FASContext, "Deterrence +3");
+                bp.SetDescription(FASContext, "When this Holy +5 Fauchard hits, you try to dispel one buff from enemy.");
+                bp.m_Cost = 200000;
+                bp.CR = 20;
+                bp.TrashLootTypes = new TrashLootType[0];
+                bp.m_Icon = SerpentPrinceFauchItem.Icon;
+                bp.m_Enchantments = new BlueprintWeaponEnchantmentReference[] {
+                    Enhancement5.ToReference<BlueprintWeaponEnchantmentReference>(),
+                    GraspOfCarsomyr5.ToReference<BlueprintWeaponEnchantmentReference>(),
+                    DeterrenceEnchament.ToReference<BlueprintWeaponEnchantmentReference>()
+                };
+            });
+
+            C5_ExoticTrader.AddComponent<LootItemsPackFixed>(loot => {
+                loot.m_Item = new LootItem() {
+                    m_Type = LootItemType.Item,
+                    m_Item = HolyDeterrence5.ToReference<BlueprintItemReference>(),
+                    m_Loot = null
+                };
+                loot.m_Count = 1;
+            });
+
         }
         private static void CreateCarsomyr6() {
 
@@ -278,8 +324,32 @@ namespace FeatAndSpells.Items {
                 };
                 loot.m_Count = 1;
             });
+
+
+            var HolyDeterrence6 = ColdIronFauchard.CreateCopy<BlueprintItemWeapon>(FASContext, "HolyDeterrence6", bp => {
+                bp.SetName(FASContext, "Deterrence +3");
+                bp.SetDescription(FASContext, "When this Holy +6 Fauchard hits, you try to dispel one buff from enemy.");
+                bp.m_Cost = 5000000;
+                bp.CR = 25;
+                bp.TrashLootTypes = new TrashLootType[0];
+                bp.m_Icon = SerpentPrinceFauchItem.Icon;
+                bp.m_Enchantments = new BlueprintWeaponEnchantmentReference[] {
+                    Enhancement6.ToReference<BlueprintWeaponEnchantmentReference>(),
+                    GraspOfCarsomyr6.ToReference<BlueprintWeaponEnchantmentReference>(),
+                    DeterrenceEnchament.ToReference<BlueprintWeaponEnchantmentReference>(),
+                    HolyEnch.ToReference<BlueprintWeaponEnchantmentReference>()
+                };
+            });
+
+            C5_ExoticTrader.AddComponent<LootItemsPackFixed>(loot => {
+                loot.m_Item = new LootItem() {
+                    m_Type = LootItemType.Item,
+                    m_Item = HolyDeterrence6.ToReference<BlueprintItemReference>(),
+                    m_Loot = null
+                };
+                loot.m_Count = 1;
+            });
+
         }
-
-
     }
 }

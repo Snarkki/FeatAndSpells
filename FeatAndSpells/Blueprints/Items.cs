@@ -45,7 +45,9 @@ namespace FeatAndSpells.Blueprints {
 
 
         public static BlueprintItemWeapon ColdIronGreatSword = BlueprintTools.GetBlueprint<BlueprintItemWeapon>("d48ee6124ad593f429e2e618726f2ef7");
+        public static BlueprintItemWeapon ColdIronFauchard = BlueprintTools.GetBlueprint<BlueprintItemWeapon>("c4aa7ad69a9908740a8d6994f1cc8f54");
         public static BlueprintItemWeapon DevaGreatSword = BlueprintTools.GetBlueprint<BlueprintItemWeapon>("de889bf84998b8e46a4ba9b6b84cf1d0");
+        public static BlueprintItemWeapon SerpentPrinceFauchItem = BlueprintTools.GetBlueprint<BlueprintItemWeapon>("d1605b9f9a5a74c46a0dde19f01eae40");
 
         public static BlueprintWeaponEnchantment Enhancement1 = BlueprintTools.GetBlueprint<BlueprintWeaponEnchantment>("d42fc23b92c640846ac137dc26e000d4");
         public static BlueprintWeaponEnchantment Enhancement2 = BlueprintTools.GetBlueprint<BlueprintWeaponEnchantment>("eb2faccc4c9487d43b3575d7e77ff3f5");
