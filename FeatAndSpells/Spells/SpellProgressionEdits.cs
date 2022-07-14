@@ -32,7 +32,10 @@ namespace FeatAndSpells.Spells {
                 if (flag3) { HybridSpellsKnown(BardSpellsKnownTable); }
 
                 bool flag4 = InquisitorSpellsKnownTable != null;
-                if (flag4) { HybridSpellsKnown(InquisitorSpellsKnownTable); }
+                if (flag4) { MergedPatchSpontanousCasterSpellProgression(InquisitorSpellsKnownTable); }
+                bool flag22 = InquisitorSpellSlotsTable != null;
+                if (flag22) { MythicSpellsKnown(InquisitorSpellSlotsTable); }
+
 
                 bool flag5 = SkaldSpellsKnownTable != null;
                 if (flag5) { HybridSpellsKnown(SkaldSpellsKnownTable); }
@@ -77,8 +80,7 @@ namespace FeatAndSpells.Spells {
                 bool flag21 = BardSpellSlotsTable != null;
                 if (flag21) { BaseWorldcrawlHybridSpellProgression(BardSpellSlotsTable); }
 
-                bool flag22 = InquisitorSpellSlotsTable != null;
-                if (flag22) { BaseWorldcrawlHybridSpellProgression(InquisitorSpellSlotsTable); }
+
 
                 bool flag23 = MagusSpellLevels != null;
                 if (flag23) { BaseWorldcrawlHybridSpellProgression(MagusSpellLevels); }
@@ -93,10 +95,10 @@ namespace FeatAndSpells.Spells {
                 if (flag26) { BaseWorldcrawlHybridSpellProgression(SkaldSpellSlotsTable); }
 
                 bool flag27 = BloodragerSpellPerDayTable != null;
-                if (flag27) { MergedPatchSpontanousCasterSpellProgression(BloodragerSpellPerDayTable); } // HalfSpellsPerKnown
-                if (flag27) { MythicSpellsKnown(BloodragerSpellKnownTable); } // HalfSpellsKnown
+                if (flag27) { HalfSpellsPerKnown(BloodragerSpellPerDayTable); } // HalfSpellsPerKnown
+                if (flag27) { HalfSpellsKnown(BloodragerSpellKnownTable); } // HalfSpellsKnown
 
-            bool flag28 = PaladinSpellLevels != null;
+                bool flag28 = PaladinSpellLevels != null;
                 if (flag28) { BaseWorldcrawlHybridSpellProgression(PaladinSpellLevels); }
 
                 bool flag29 = RangerSpellLevels != null;
@@ -120,20 +122,20 @@ namespace FeatAndSpells.Spells {
                     new[] {0, 5, 3},
                     new[] {0, 5, 4},
                     new[] {0, 5, 5, 3},
-                    new[] {0, 7, 5, 4},
-                    new[] {0, 7, 6, 5, 3},
-                    new[] {0, 7, 6, 6, 4},
-                    new[] {0, 7, 7, 6, 5, 3},
-                    new[] {0, 7, 7, 6, 5, 4},
-                    new[] {0, 7, 7, 7, 6, 4, 3},
-                    new[] {0, 7, 7, 7, 6, 5, 4},
-                    new[] {0, 7, 7, 7, 6, 5, 5, 3},
-                    new[] {0, 7, 7, 7, 6, 5, 5, 4},
-                    new[] {0, 7, 7, 7, 6, 5, 5, 5, 3},
-                    new[] {0, 7, 7, 7, 7, 5, 5, 5, 4},
-                    new[] {0, 7, 7, 7, 7, 6, 5, 5, 5, 3},
-                    new[] {0, 7, 7, 7, 7, 6, 5, 5, 5, 4},
-                    new[] {0, 7, 7, 7, 7, 6, 6, 5, 5, 5},
+                    new[] {0, 6, 5, 4},
+                    new[] {0, 6, 5, 5, 3},
+                    new[] {0, 6, 5, 5, 4},
+                    new[] {0, 6, 6, 5, 5, 3},
+                    new[] {0, 6, 6, 5, 5, 4},
+                    new[] {0, 6, 6, 6, 5, 4, 3},
+                    new[] {0, 6, 6, 6, 5, 5, 4},
+                    new[] {0, 6, 6, 6, 5, 5, 5, 3},
+                    new[] {0, 6, 6, 6, 5, 5, 5, 4},
+                    new[] {0, 6, 6, 6, 5, 5, 5, 5, 3},
+                    new[] {0, 6, 6, 6, 6, 5, 5, 5, 4},
+                    new[] {0, 6, 6, 6, 6, 5, 5, 5, 5, 3},
+                    new[] {0, 6, 6, 6, 6, 5, 5, 5, 5, 4},
+                    new[] {0, 6, 6, 6, 6, 5, 5, 5, 5, 5},
                 };
                 SpellsLevelEntry[] cantrips = new SpellsLevelEntry[]
                 {

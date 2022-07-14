@@ -187,6 +187,7 @@ namespace FeatAndSpells.Spells {
             });
 
             LongArmAbility.AddToSpellList(SpellTools.SpellList.PaladinSpellList, 1);
+            LongArmAbility.AddToSpellList(SpellTools.SpellList.InquisitorSpellList, 1);
         }
 
 
@@ -194,7 +195,7 @@ namespace FeatAndSpells.Spells {
             var icon = AssetLoader.LoadInternal(FASContext, "Abilities", "FreezingSphere.png");
             //var icon = Resources.GetBlueprint<BlueprintAbility>("9f10909f0be1f5141bf1c102041f93d9");
             //KineticFistBlizzardBlast
-            var SnowProjectile = BlueprintTools.GetBlueprint<BlueprintProjectile>("79a66a3766ae87146beb6000a73e8213");
+            var SnowProjectile = BlueprintTools.GetBlueprint<BlueprintProjectile>("8927afa172e0fc54484a29fa0c4c40c4");
             var RayWeapon = BlueprintTools.GetBlueprint<BlueprintItemWeapon>("f6ef95b1f7bb52b408a5b345a330ffe8");
             var SnowballBuff = BlueprintTools.GetBlueprint<BlueprintBuff>("f767ee03a6cb62943b59bacbd8ced2e0");
 

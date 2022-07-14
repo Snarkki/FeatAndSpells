@@ -113,18 +113,18 @@ namespace FeatAndSpells.Classes {
 
                 bp.AddFeatures = new LevelEntry[] {
                     Helpers.CreateLevelEntry(2, FighterFeatSelection),
-                    //Helpers.CreateLevelEntry(3, FighterArmorTraining),
+                    Helpers.CreateLevelEntry(3, FighterArmorTraining),
                      Helpers.CreateLevelEntry(4, FighterFeatSelection),
                     //Helpers.CreateLevelEntry(5, FighterWeaponTraining),
                      Helpers.CreateLevelEntry(6, FighterFeatSelection),
-                   // Helpers.CreateLevelEntry(7, FighterArmorTraining),
+                    Helpers.CreateLevelEntry(7, FighterArmorTraining),
                    // Helpers.CreateLevelEntry(9, FighterWeaponTrainingRankUp),
                      Helpers.CreateLevelEntry(10, FighterFeatSelection),
-                  //  Helpers.CreateLevelEntry(11, FighterArmorTraining),
+                    Helpers.CreateLevelEntry(11, FighterArmorTraining),
                      Helpers.CreateLevelEntry(12, FighterFeatSelection),
                   // Helpers.CreateLevelEntry(13, FighterWeaponTrainingRankUp),
                      Helpers.CreateLevelEntry(14, FighterFeatSelection),
-                  //  Helpers.CreateLevelEntry(15, FighterArmorTraining),
+                    Helpers.CreateLevelEntry(15, FighterArmorTraining),
                   //  Helpers.CreateLevelEntry(17, FighterWeaponTrainingRankUp),
                      Helpers.CreateLevelEntry(20, FighterFeatSelection),
                 };
@@ -133,9 +133,9 @@ namespace FeatAndSpells.Classes {
             PaladinClass.m_Archetypes = PaladinClass.m_Archetypes.AppendToArray(TemplarArchetype.ToReference<BlueprintArchetypeReference>());
 
             PaladinClass.Progression.UIGroups = PaladinClass.Progression.UIGroups.AppendToArray(
-                //Helpers.CreateUIGroup(
-                //    FighterArmorTraining
-                //                ),
+                Helpers.CreateUIGroup(
+                    FighterArmorTraining
+                               ),
                 //Helpers.CreateUIGroup(
                 //    FighterWeaponTraining,
                 //    FighterWeaponTrainingRankUp
