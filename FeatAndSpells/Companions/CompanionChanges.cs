@@ -40,12 +40,12 @@ namespace FeatAndSpells.Companions {
 
         private static void ChangePCChar() {
             BlueprintUnit StartGame_Player_Unit = BlueprintTools.GetBlueprint<BlueprintUnit>("4391e8b9afbb0cf43aeba700c089f56d");
-            StartGame_Player_Unit.Strength = 12;
-            StartGame_Player_Unit.Dexterity = 12;
-            StartGame_Player_Unit.Constitution = 12;
-            StartGame_Player_Unit.Intelligence = 12;
-            StartGame_Player_Unit.Wisdom = 12;
-            StartGame_Player_Unit.Charisma = 12;
+            StartGame_Player_Unit.Strength = 11;
+            StartGame_Player_Unit.Dexterity = 11;
+            StartGame_Player_Unit.Constitution = 11;
+            StartGame_Player_Unit.Intelligence = 11;
+            StartGame_Player_Unit.Wisdom = 11;
+            StartGame_Player_Unit.Charisma = 11;
         }
 
         private static void CustomBackground() {
