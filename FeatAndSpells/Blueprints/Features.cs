@@ -129,6 +129,13 @@ namespace FeatAndSpells.Blueprints {
         public static BlueprintFeature AbundantCasting = BlueprintTools.GetBlueprint<BlueprintFeature>("cf594fa8871332a4ba861c6002480ec2");
         public static BlueprintFeature CraneStyle = BlueprintTools.GetBlueprint<BlueprintFeature>("0c17102f650d9044290922b0fad9132f");
         public static BlueprintFeature DodgeFeature = BlueprintTools.GetBlueprint<BlueprintFeature>("97e216dbb46ae3c4faef90cf6bbe6fd5");
+        public static BlueprintFeature ImprovedPreciseShot = BlueprintTools.GetBlueprint<BlueprintFeature>("46f970a6b9b5d2346b10892673fe6e74");
+        public static BlueprintFeature Manyshot = BlueprintTools.GetBlueprint<BlueprintFeature>("adf54af2a681792489826f7fd1b62889");
+        public static BlueprintFeature ClusteredShots = BlueprintTools.GetBlueprint<BlueprintFeature>("f7de245bb20f12f47864c7cb8b1d1abb");
+        public static BlueprintFeature ExtraChannelOracle = BlueprintTools.GetBlueprint<BlueprintFeature>("53da6bf487997e947960bd6c02be9adf");
+        public static BlueprintFeature SpellPenetration = BlueprintTools.GetBlueprint<BlueprintFeature>("ee7dc126939e4d9438357fbd5980d459");
+        public static BlueprintFeature GreaterSpellPenetration = BlueprintTools.GetBlueprint<BlueprintFeature>("1978c3f91cfbbc24b9c9b0d017f4beec");
+
 
         public static BlueprintFeature ScrollFocus = BlueprintTools.GetBlueprint<BlueprintFeature>("51245c2b92a5b4247acf754156798fea");
         public static BlueprintFeature ScrollSpecialization = BlueprintTools.GetBlueprint<BlueprintFeature>("3964f0389e60da944aaa2ffd227ae531");
