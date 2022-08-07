@@ -40,6 +40,7 @@ namespace FeatAndSpells.Blueprints {
         public static BlueprintSpellbook AccursedSpellBook = BlueprintTools.GetBlueprint<BlueprintSpellbook>("b897fe0947e4b804082b1a687c21e6e2");
         public static BlueprintSpellbook BloodragerSpellBook = BlueprintTools.GetBlueprint<BlueprintSpellbook>("e19484252c2f80e4a9439b3681b20f00");
         public static BlueprintSpellbook AngelSpellBook = BlueprintTools.GetBlueprint<BlueprintSpellbook>("015658ac45811b843b036e4ccc96c772");
+        public static BlueprintSpellbook SwordSaintSpellbook = BlueprintTools.GetBlueprint<BlueprintSpellbook>("682545e11e5306c45b14ca78bcbe3e62");
 
         public static BlueprintSpellList PaladinSpellList = BlueprintTools.GetBlueprint<BlueprintSpellList>("9f5be2f7ea64fe04eb40878347b147bc");
 

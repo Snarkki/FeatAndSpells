@@ -30,7 +30,7 @@ namespace FeatAndSpells.Blueprints {
 
         public static BlueprintBuff EnlargePersonBuff = BlueprintTools.GetBlueprint<BlueprintBuff>("4f139d125bb602f48bfaec3d3e1937cb");
         public static BlueprintBuff ReducePersonBuff = BlueprintTools.GetBlueprint<BlueprintBuff>("b0793973c61a19744a8630468e8f4174");
-        public static BlueprintBuff AnimalGrowthBuff = BlueprintTools.GetBlueprint<BlueprintBuff>("4f139d125bb602f48bfaec3d3e1937cb");
+        public static BlueprintBuff AnimalGrowthBuff = BlueprintTools.GetBlueprint<BlueprintBuff>("3fca5d38053677044a7ffd9a872d3a0a");
 
     }
 }

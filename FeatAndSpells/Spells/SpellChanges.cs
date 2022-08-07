@@ -32,7 +32,7 @@ namespace FeatAndSpells.Spells {
             AddSpells();
             ChangeDRSpells();
             ChangeDmgSpells();
-            //ChangeSizeSpells();
+            ChangeSizeSpells();
         }
 
         private static void AddFrighteningChange() {
@@ -122,51 +122,53 @@ namespace FeatAndSpells.Spells {
             //var maxHd = Scare.GetComponent<AbilityEffectRunAction>();
             //var tete = maxHd.Actions.GetActions
 
+            var maxDmg = ShockingGraspEffect.GetComponent<ContextRankConfig>();
+            maxDmg.m_Max = 20;
         }
 
 
         public static void ChangeSizeSpells() {
 
-            EnlargePersonBuff.RemoveComponents<ChangeUnitSize>();
+            //EnlargePersonBuff.RemoveComponents<ChangeUnitSize>();
             ReducePersonBuff.RemoveComponents<ChangeUnitSize>();
-
-            AnimalGrowthBuff.Components = new BlueprintComponent[] {
-                Helpers.Create<AddContextStatBonus>( c => {
-                    c.Stat = Kingmaker.EntitySystem.Stats.StatType.Strength;
-                    c.Value = new ContextValue() {
-                                    ValueType = ContextValueType.Simple,
-                                    Value = 10,
-                                    ValueRank = AbilityRankType.Default,
-                                    ValueShared = AbilitySharedValue.Damage,
-                                    Property = Kingmaker.UnitLogic.Mechanics.Properties.UnitProperty.None
-                                };
-                    c.Descriptor = Kingmaker.Enums.ModifierDescriptor.Size;
-                }),
-                Helpers.Create<AddContextStatBonus>( c => {
-                    c.Stat = Kingmaker.EntitySystem.Stats.StatType.Constitution;
-                                        c.Value = new ContextValue() {
-                                    ValueType = ContextValueType.Simple,
-                                    Value = 6,
-                                    ValueRank = AbilityRankType.Default,
-                                    ValueShared = AbilitySharedValue.Damage,
-                                    Property = Kingmaker.UnitLogic.Mechanics.Properties.UnitProperty.None
-                                };
-                    c.Descriptor = Kingmaker.Enums.ModifierDescriptor.Size;
-                }),
-                Helpers.Create<AddContextStatBonus>( c => {
-                    c.Stat = Kingmaker.EntitySystem.Stats.StatType.AC;
-                                        c.Value = new ContextValue() {
-                                    ValueType = ContextValueType.Simple,
-                                    Value = 3,
-                                    ValueRank = AbilityRankType.Default,
-                                    ValueShared = AbilitySharedValue.Damage,
-                                    Property = Kingmaker.UnitLogic.Mechanics.Properties.UnitProperty.None
-                                };
-                    c.Multiplier = 1;
-                    c.Descriptor = Kingmaker.Enums.ModifierDescriptor.NaturalArmorEnhancement;
-                }),
-            };
-            AnimalGrowthBuff.SetDescription(FASContext, "Animal Growth gives your animal companion +10 strength, +6 constitution and +3 natual armour enchantment. It does not actually change the size of the animal!");
+            AnimalGrowthBuff.RemoveComponents<ChangeUnitSize>();
+            //AnimalGrowthBuff.Components = new BlueprintComponent[] {
+            //    Helpers.Create<AddContextStatBonus>( c => {
+            //        c.Stat = Kingmaker.EntitySystem.Stats.StatType.Strength;
+            //        c.Value = new ContextValue() {
+            //                        ValueType = ContextValueType.Simple,
+            //                        Value = 10,
+            //                        ValueRank = AbilityRankType.Default,
+            //                        ValueShared = AbilitySharedValue.Damage,
+            //                        Property = Kingmaker.UnitLogic.Mechanics.Properties.UnitProperty.None
+            //                    };
+            //        c.Descriptor = Kingmaker.Enums.ModifierDescriptor.Size;
+            //    }),
+            //    Helpers.Create<AddContextStatBonus>( c => {
+            //        c.Stat = Kingmaker.EntitySystem.Stats.StatType.Constitution;
+            //                            c.Value = new ContextValue() {
+            //                        ValueType = ContextValueType.Simple,
+            //                        Value = 6,
+            //                        ValueRank = AbilityRankType.Default,
+            //                        ValueShared = AbilitySharedValue.Damage,
+            //                        Property = Kingmaker.UnitLogic.Mechanics.Properties.UnitProperty.None
+            //                    };
+            //        c.Descriptor = Kingmaker.Enums.ModifierDescriptor.Size;
+            //    }),
+            //    Helpers.Create<AddContextStatBonus>( c => {
+            //        c.Stat = Kingmaker.EntitySystem.Stats.StatType.AC;
+            //                            c.Value = new ContextValue() {
+            //                        ValueType = ContextValueType.Simple,
+            //                        Value = 3,
+            //                        ValueRank = AbilityRankType.Default,
+            //                        ValueShared = AbilitySharedValue.Damage,
+            //                        Property = Kingmaker.UnitLogic.Mechanics.Properties.UnitProperty.None
+            //                    };
+            //        c.Multiplier = 1;
+            //        c.Descriptor = Kingmaker.Enums.ModifierDescriptor.NaturalArmorEnhancement;
+            //    }),
+            //};
+            //AnimalGrowthBuff.SetDescription(FASContext, "Animal Growth gives your animal companion +10 strength, +6 constitution and +3 natual armour enchantment. It does not actually change the size of the animal!");
 
             //ReducePersonBuff
         }

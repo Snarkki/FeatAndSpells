@@ -101,6 +101,7 @@ namespace FeatAndSpells.Classes {
                 bp.m_ReplaceSpellbook = TemplarSpellBook.ToReference<BlueprintSpellbookReference>();
 
                 bp.RemoveFeatures = new LevelEntry[] {
+                    Helpers.CreateLevelEntry(1, PaladinAlignmentRestriction),
                     Helpers.CreateLevelEntry(3, SelectionMercy),
                     Helpers.CreateLevelEntry(6, SelectionMercy),
                     Helpers.CreateLevelEntry(9, SelectionMercy),

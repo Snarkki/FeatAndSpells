@@ -40,14 +40,44 @@ namespace FeatAndSpells.Classes {
 
         public static void ChangeSwordSaint() {
 
-            //SwordSaintArcheType.AddFeatures = new LevelEntry[] {
-            //        , CannyDefense, SwordSaintChosenWeapon
+            Blueprints.Abilities.SenseVitals.AddToSpellList(SpellTools.SpellList.MagusSpellList, 2);
 
-            //    };
+            Blueprints.Abilities.LegendaryProportions.AddToSpellList(SpellTools.SpellList.MagusSpellList, 7);
+            Blueprints.Abilities.KiShout.AddToSpellList(SpellTools.SpellList.MagusSpellList, 7);
+            Blueprints.Abilities.PrismaticSpray.AddToSpellList(SpellTools.SpellList.MagusSpellList, 7);
+            Blueprints.Abilities.WavesOfExhaustion.AddToSpellList(SpellTools.SpellList.MagusSpellList, 7);
+            Blueprints.Abilities.WavesOfEctasy.AddToSpellList(SpellTools.SpellList.MagusSpellList, 7);
+            Blueprints.Abilities.UmbralStrike.AddToSpellList(SpellTools.SpellList.MagusSpellList, 7);
+            Blueprints.Abilities.FingerOfDeath.AddToSpellList(SpellTools.SpellList.MagusSpellList, 7);
 
-            SwordSaintArcheType.AddFeatures = SwordSaintArcheType.AddFeatures.AppendToArray(Helpers.CreateLevelEntry(1, ScaledFistAcBonus));
+            Blueprints.Abilities.FrightfulAspect.AddToSpellList(SpellTools.SpellList.MagusSpellList, 9);
+            Blueprints.Abilities.Stormbolts.AddToSpellList(SpellTools.SpellList.MagusSpellList, 9);
+            Blueprints.Abilities.RiftOfRuin.AddToSpellList(SpellTools.SpellList.MagusSpellList, 9);
+            Blueprints.Abilities.ShoutGreater.AddToSpellList(SpellTools.SpellList.MagusSpellList, 9);
+            Blueprints.Abilities.PolarRay.AddToSpellList(SpellTools.SpellList.MagusSpellList, 9);
+
+            Blueprints.Abilities.HeroicInvocation.AddToSpellList(SpellTools.SpellList.MagusSpellList, 9);
+            Blueprints.Abilities.OverwhelmingPresence.AddToSpellList(SpellTools.SpellList.MagusSpellList, 9);
+            Blueprints.Abilities.Foresight.AddToSpellList(SpellTools.SpellList.MagusSpellList, 9);
+
+            SpellBooks.EldritchScionSpellbook.CastingAttribute = StatType.Intelligence;
+
+            SwordSaintArcheType.m_ReplaceSpellbook = SpellBooks.EldritchScionSpellbook.ToReference<BlueprintSpellbookReference>();
+
+            SwordSaintArcheType.AddFeatures = SwordSaintArcheType.AddFeatures.AppendToArray(
+                Helpers.CreateLevelEntry(1, SneakAttack, PointBlankFeature, PreciseShot, SpellPenetration, GreaterSpellPenetration, ScaledFistAcBonus),
+                Helpers.CreateLevelEntry(3, SneakAttack),
+                Helpers.CreateLevelEntry(5, SneakAttack),
+                Helpers.CreateLevelEntry(7, SneakAttack),
+                Helpers.CreateLevelEntry(9, SneakAttack),
+                Helpers.CreateLevelEntry(11, SneakAttack),
+                Helpers.CreateLevelEntry(13, SneakAttack),
+                Helpers.CreateLevelEntry(15, SneakAttack),
+                Helpers.CreateLevelEntry(17, SneakAttack),
+                Helpers.CreateLevelEntry(19, SneakAttack)
+                );
             MagusClass.Progression.UIGroups = MagusClass.Progression.UIGroups.AppendToArray(
-                   Helpers.CreateUIGroup(ScaledFistAcBonus)
+                   Helpers.CreateUIGroup(SneakAttack)
                 );
             FASContext.Logger.LogHeader("Changed SwordSaint");
         }

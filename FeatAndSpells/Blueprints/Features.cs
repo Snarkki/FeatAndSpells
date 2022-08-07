@@ -65,6 +65,7 @@ namespace FeatAndSpells.Blueprints {
         public static BlueprintFeature FighterWeaponTrainingRankUp = BlueprintTools.GetBlueprint<BlueprintFeature>("5f3cc7b9a46b880448275763fe70c0b0");
         public static BlueprintFeature FighterArmorTraining = BlueprintTools.GetBlueprint<BlueprintFeature>("3c380607706f209499d951b29d3c44f3");
         public static BlueprintFeature SelectionMercy = BlueprintTools.GetBlueprint<BlueprintFeature>("02b187038a8dce545bb34bbfb346428d");
+        public static BlueprintFeature PaladinAlignmentRestriction = BlueprintTools.GetBlueprint<BlueprintFeature>("f8c91c0135d5fc3458fcc131c4b77e96");
         public static BlueprintFeature ChannelEnergy = BlueprintTools.GetBlueprint<BlueprintFeature>("cb6d55dda5ab906459d18a435994a760");
         public static BlueprintFeature MarkOfJustice = BlueprintTools.GetBlueprint<BlueprintFeature>("9f13fdd044ccb8a439f27417481cb00e");
         public static BlueprintFeature ZenArcheryFeature = BlueprintTools.GetBlueprint<BlueprintFeature>("379c0da9f384e7547a70c259445377f5");

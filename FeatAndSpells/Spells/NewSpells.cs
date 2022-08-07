@@ -427,6 +427,7 @@ namespace FeatAndSpells.Spells {
             FlurryOFSnowBalls.AddToSpellList(SpellTools.SpellList.WitchSpellList, 2);
             FlurryOFSnowBalls.AddToSpellList(SpellTools.SpellList.DruidSpellList, 2);
             FlurryOFSnowBalls.AddToSpellList(SpellTools.SpellList.ShamanSpelllist, 2);
+            FlurryOFSnowBalls.AddToSpellList(SpellTools.SpellList.MagusSpellList, 2);
         }
 
 
@@ -1802,6 +1803,7 @@ namespace FeatAndSpells.Spells {
             MassHeroismAbility.AddToSpellList(SpellTools.SpellList.ClericSpellList, 7);
             MassHeroismAbility.AddToSpellList(SpellTools.SpellList.RangerSpellList, 4);
         }
+
     }
 }
 

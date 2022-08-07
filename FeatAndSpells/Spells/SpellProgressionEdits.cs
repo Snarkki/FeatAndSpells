@@ -29,12 +29,14 @@ namespace FeatAndSpells.Spells {
                 if (flag9) { BaseWorldcrawlSpontaneousSpellKnown(SorcererSpellsDailyTable); }
 
                 bool flag3 = BardSpellsKnownTable != null;
-                if (flag3) { HybridSpellsKnown(BardSpellsKnownTable); }
+                if (flag3) { MythicSpellsKnown(BardSpellsKnownTable); }
+                bool flag21 = BardSpellSlotsTable != null;
+                if (flag21) { MergedPatchSpontanousCasterSpellProgression(BardSpellSlotsTable); }
 
                 bool flag4 = InquisitorSpellsKnownTable != null;
-                if (flag4) { MergedPatchSpontanousCasterSpellProgression(InquisitorSpellsKnownTable); }
+                if (flag4) { HybridSpellsKnown(InquisitorSpellsKnownTable); }
                 bool flag22 = InquisitorSpellSlotsTable != null;
-                if (flag22) { MythicSpellsKnown(InquisitorSpellSlotsTable); }
+                if (flag22) { BaseWorldcrawlHybridSpellProgression(InquisitorSpellSlotsTable); }
 
 
                 bool flag5 = SkaldSpellsKnownTable != null;
@@ -77,8 +79,7 @@ namespace FeatAndSpells.Spells {
                 bool flag20 = AlchemistSpellLevels != null;
                 if (flag20) { BaseWorldcrawlHybridSpellProgression(AlchemistSpellLevels); }
 
-                bool flag21 = BardSpellSlotsTable != null;
-                if (flag21) { BaseWorldcrawlHybridSpellProgression(BardSpellSlotsTable); }
+
 
 
 
@@ -122,20 +123,20 @@ namespace FeatAndSpells.Spells {
                     new[] {0, 5, 3},
                     new[] {0, 5, 4},
                     new[] {0, 5, 5, 3},
-                    new[] {0, 6, 5, 4},
+                    new[] {0, 6, 5, 3},
+                    new[] {0, 6, 5, 5, 2},
                     new[] {0, 6, 5, 5, 3},
-                    new[] {0, 6, 5, 5, 4},
+                    new[] {0, 6, 6, 5, 4, 2},
                     new[] {0, 6, 6, 5, 5, 3},
-                    new[] {0, 6, 6, 5, 5, 4},
-                    new[] {0, 6, 6, 6, 5, 4, 3},
-                    new[] {0, 6, 6, 6, 5, 5, 4},
+                    new[] {0, 6, 6, 6, 5, 4, 2},
+                    new[] {0, 6, 6, 6, 5, 5, 3},
+                    new[] {0, 6, 6, 6, 5, 5, 4, 2},
                     new[] {0, 6, 6, 6, 5, 5, 5, 3},
-                    new[] {0, 6, 6, 6, 5, 5, 5, 4},
+                    new[] {0, 6, 6, 6, 5, 5, 5, 4, 2},
                     new[] {0, 6, 6, 6, 5, 5, 5, 5, 3},
-                    new[] {0, 6, 6, 6, 6, 5, 5, 5, 4},
-                    new[] {0, 6, 6, 6, 6, 5, 5, 5, 5, 3},
-                    new[] {0, 6, 6, 6, 6, 5, 5, 5, 5, 4},
-                    new[] {0, 6, 6, 6, 6, 5, 5, 5, 5, 5},
+                    new[] {0, 6, 6, 6, 5, 5, 5, 5, 4, 2},
+                    new[] {0, 6, 6, 6, 5, 5, 5, 5, 5, 3},
+                    new[] {0, 6, 6, 6, 5, 5, 5, 5, 5, 4},
                 };
                 SpellsLevelEntry[] cantrips = new SpellsLevelEntry[]
                 {
@@ -257,26 +258,48 @@ namespace FeatAndSpells.Spells {
                 var additionalSlotTables = new List<int[]>
                     {
                     new[] {0, 6},
+                    new[] {0, 7},
                     new[] {0, 8},
-                    new[] {0, 10},
-                    new[] {0, 10, 5},
-                    new[] {0, 10, 7},
-                    new[] {0, 10, 8, 5},
-                    new[] {0, 10, 9, 6},
-                    new[] {0, 10, 10, 7, 5},
-                    new[] {0, 10, 10, 8, 6},
-                    new[] {0, 10, 10, 8, 7, 4},
-                    new[] {0, 10, 10, 9, 7, 5},
-                    new[] {0, 10, 10, 9, 8, 5, 4},
-                    new[] {0, 10, 10, 10, 8, 6, 5},
-                    new[] {0, 10, 10, 10, 8, 6, 6, 4},
-                    new[] {0, 10, 10, 10, 9, 7, 6, 5},
-                    new[] {0, 10, 10, 10, 9, 7, 7, 5, 4},
-                    new[] {0, 10, 10, 10, 9, 8, 7, 6, 5},
-                    new[] {0, 10, 10, 10, 10, 8, 8, 6, 5, 3},
-                    new[] {0, 10, 10, 10, 10, 9, 8, 7, 6, 4},
-                    new[] {0, 10, 10, 10, 10, 9, 9, 7, 7, 5},
+                    new[] {0, 8, 5},
+                    new[] {0, 8, 7},
+                    new[] {0, 8, 8, 5},
+                    new[] {0, 8, 8, 6},
+                    new[] {0, 8, 8, 7, 5},
+                    new[] {0, 8, 8, 8, 6},
+                    new[] {0, 8, 8, 8, 7, 4},
+                    new[] {0, 8, 8, 8, 7, 5},
+                    new[] {0, 8, 8, 8, 8, 5, 4},
+                    new[] {0, 8, 8, 8, 8, 6, 5},
+                    new[] {0, 8, 8, 8, 8, 6, 6, 4},
+                    new[] {0, 8, 8, 8, 8, 7, 6, 5},
+                    new[] {0, 8, 8, 8, 8, 7, 7, 5, 4},
+                    new[] {0, 8, 8, 8, 8, 8, 7, 6, 5},
+                    new[] {0, 8, 8, 8, 8, 8, 8, 6, 5, 3},
+                    new[] {0, 8, 8, 8, 8, 8, 8, 7, 6, 4},
+                    new[] {0, 8, 8, 8, 8, 8, 8, 7, 7, 5},
                 };
+
+            //new[] { 0, 6 },
+            //        new[] { 0, 8 },
+            //        new[] { 0, 10 },
+            //        new[] { 0, 10, 5 },
+            //        new[] { 0, 10, 7 },
+            //        new[] { 0, 10, 8, 5 },
+            //        new[] { 0, 10, 9, 6 },
+            //        new[] { 0, 10, 10, 7, 5 },
+            //        new[] { 0, 10, 10, 8, 6 },
+            //        new[] { 0, 10, 10, 8, 7, 4 },
+            //        new[] { 0, 10, 10, 9, 7, 5 },
+            //        new[] { 0, 10, 10, 9, 8, 5, 4 },
+            //        new[] { 0, 10, 10, 10, 8, 6, 5 },
+            //        new[] { 0, 10, 10, 10, 8, 6, 6, 4 },
+            //        new[] { 0, 10, 10, 10, 9, 7, 6, 5 },
+            //        new[] { 0, 10, 10, 10, 9, 7, 7, 5, 4 },
+            //        new[] { 0, 10, 10, 10, 9, 8, 7, 6, 5 },
+            //        new[] { 0, 10, 10, 10, 10, 8, 8, 6, 5, 3 },
+            //        new[] { 0, 10, 10, 10, 10, 9, 8, 7, 6, 4 },
+            //        new[] { 0, 10, 10, 10, 10, 9, 9, 7, 7, 5 },
+
                 SpellsLevelEntry[] cantrips = new SpellsLevelEntry[]
     {
                 new SpellsLevelEntry(),
@@ -289,26 +312,26 @@ namespace FeatAndSpells.Spells {
                 List<SpellsLevelEntry> levels = new List<SpellsLevelEntry>();
                 var additionalSlotTables = new List<int[]>
                     {
-                    new[] {0, 3},
                     new[] {0, 4},
                     new[] {0, 5},
-                    new[] {0, 6, 2},
-                    new[] {0, 6, 3},
-                    new[] {0, 6, 3},
-                    new[] {0, 6, 4, 2},
-                    new[] {0, 6, 5, 3},
-                    new[] {0, 6, 5, 2},
-                    new[] {0, 6, 6, 3},
-                    new[] {0, 6, 6, 4, 2},
-                    new[] {0, 6, 6, 5, 3},
-                    new[] {0, 6, 6, 5, 3},
-                    new[] {0, 6, 6, 6, 3, 2},
-                    new[] {0, 6, 6, 6, 4, 3},
-                    new[] {0, 6, 6, 6, 5, 4},
-                    new[] {0, 6, 6, 6, 5, 4, 2},
-                    new[] {0, 6, 6, 6, 5, 5, 3},
-                    new[] {0, 6, 6, 6, 5, 5, 4},
-                    new[] {0, 6, 6, 6, 5, 5, 5},
+                    new[] {0, 6},
+                    new[] {0, 6, 4},
+                    new[] {0, 7, 5},
+                    new[] {0, 7, 6},
+                    new[] {0, 8, 7, 4},
+                    new[] {0, 8, 7, 5},
+                    new[] {0, 8, 8, 6},
+                    new[] {0, 8, 8, 7, 4},
+                    new[] {0, 8, 8, 7, 5},
+                    new[] {0, 8, 8, 8, 6},
+                    new[] {0, 8, 8, 8, 7, 4},
+                    new[] {0, 8, 8, 8, 7, 5},
+                    new[] {0, 8, 8, 8, 8, 6},
+                    new[] {0, 8, 8, 8, 8, 7, 4},
+                    new[] {0, 8, 8, 8, 8, 7, 5},
+                    new[] {0, 8, 8, 8, 8, 8, 6},
+                    new[] {0, 8, 8, 8, 8, 8, 7},
+                    new[] {0, 8, 8, 8, 8, 8, 7},
 
                 };
                 SpellsLevelEntry[] cantrips = new SpellsLevelEntry[]
@@ -429,32 +452,32 @@ namespace FeatAndSpells.Spells {
                 {
                     new[] {0, 2 },
                     new[] {0, 3 },
-                    new[] {0, 4 },
-                    new[] {0, 5, 2 },
-                    new[] {0, 5, 3 },
-                    new[] {0, 5, 4 },
-                    new[] {0, 5, 5, 2 },
-                    new[] {0, 5, 5, 3 },
-                    new[] {0, 5, 5, 4 },
-                    new[] {0, 5, 5, 5, 2 },
-                    new[] {0, 5, 5, 5, 3 },
-                    new[] {0, 5, 5, 5, 4 },
-                    new[] {0, 5, 5, 5, 5, 3 },
-                    new[] {0, 5, 5, 5, 5, 4 },
-                    new[] {0, 5, 5, 5, 5, 5 },
-                    new[] {0, 5, 5, 5, 5, 5, 2 },
-                    new[] {0, 5, 5, 5, 5, 5, 3 },
-                    new[] {0, 5, 5, 5, 5, 5, 4 },
-                    new[] {0, 5, 5, 5, 5, 5, 4, 2 },
-                    new[] {0, 5, 5, 5, 5, 5, 4, 3 },
-                    new[] {0, 5, 5, 5, 5, 5, 4, 4 },
-                    new[] {0, 5, 5, 5, 5, 5, 4, 4, 2 },
-                    new[] {0, 5, 5, 5, 5, 5, 4, 4, 3 },
-                    new[] {0, 5, 5, 5, 5, 5, 4, 4, 4 },
-                    new[] {0, 5, 5, 5, 5, 5, 4, 4, 4, 2 },
-                    new[] {0, 5, 5, 5, 5, 5, 4, 4, 4, 3 },
-                    new[] {0, 5, 5, 5, 5, 5, 4, 4, 4, 4 },
-                    new[] {0, 5, 5, 5, 5, 5, 4, 4, 4, 4 },
+                    new[] {0, 3 },
+                    new[] {0, 4, 2 },
+                    new[] {0, 4, 3 },
+                    new[] {0, 4, 3 },
+                    new[] {0, 4, 4, 2 },
+                    new[] {0, 4, 4, 3 },
+                    new[] {0, 4, 4, 3 },
+                    new[] {0, 4, 4, 4, 2 },
+                    new[] {0, 4, 4, 4, 3 },
+                    new[] {0, 4, 4, 4, 3 },
+                    new[] {0, 4, 4, 4, 4, 3 },
+                    new[] {0, 4, 4, 4, 4, 3 },
+                    new[] {0, 4, 4, 4, 4, 4 },
+                    new[] {0, 4, 4, 4, 4, 4, 2 },
+                    new[] {0, 4, 4, 4, 4, 4, 3 },
+                    new[] {0, 4, 4, 4, 4, 4, 3 },
+                    new[] {0, 4, 4, 4, 4, 4, 3, 2 },
+                    new[] {0, 4, 4, 4, 4, 4, 3, 3 },
+                    new[] {0, 4, 4, 4, 4, 4, 3, 3 },
+                    new[] {0, 4, 4, 4, 4, 4, 3, 3, 2 },
+                    new[] {0, 4, 4, 4, 4, 4, 3, 3, 3 },
+                    new[] {0, 4, 4, 4, 4, 4, 3, 3, 3 },
+                    new[] {0, 4, 4, 4, 4, 4, 3, 3, 3, 2 },
+                    new[] {0, 4, 4, 4, 4, 4, 3, 3, 3, 3 },
+                    new[] {0, 4, 4, 4, 4, 4, 3, 3, 3, 3 },
+                    new[] {0, 4, 4, 4, 4, 4, 3, 3, 3, 3 },
                 };
             SpellsLevelEntry[] cantrips = new SpellsLevelEntry[]
             {
