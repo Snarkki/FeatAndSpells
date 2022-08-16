@@ -29,9 +29,9 @@ namespace FeatAndSpells.Spells {
                 if (flag9) { BaseWorldcrawlSpontaneousSpellKnown(SorcererSpellsDailyTable); }
 
                 bool flag3 = BardSpellsKnownTable != null;
-                if (flag3) { MythicSpellsKnown(BardSpellsKnownTable); }
+                if (flag3) { HybridSpellsKnown(BardSpellsKnownTable); }
                 bool flag21 = BardSpellSlotsTable != null;
-                if (flag21) { MergedPatchSpontanousCasterSpellProgression(BardSpellSlotsTable); }
+                if (flag21) { BaseWorldcrawlHybridSpellProgression(BardSpellSlotsTable); }
 
                 bool flag4 = InquisitorSpellsKnownTable != null;
                 if (flag4) { HybridSpellsKnown(InquisitorSpellsKnownTable); }

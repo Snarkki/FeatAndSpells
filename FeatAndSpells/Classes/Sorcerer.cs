@@ -35,9 +35,8 @@ namespace FeatAndSpells.Classes {
             SageSorcererArcheType.AddFeatures = SageSorcererArcheType.AddFeatures.AppendToArray(
                     Helpers.CreateLevelEntry(1, SpellPenetration, RangedLegerdemainFeature, PointBlankShot),
                     Helpers.CreateLevelEntry(2, SneakAttack, PreciseShot),
-                    Helpers.CreateLevelEntry(3, GreaterSpellPenetration, RangedLegerdemainFeature),
+                    Helpers.CreateLevelEntry(3, GreaterSpellPenetration),
                     Helpers.CreateLevelEntry(4, SneakAttack),
-                    Helpers.CreateLevelEntry(5, ToughnessFeature),
                     Helpers.CreateLevelEntry(7, SneakAttack),
                     Helpers.CreateLevelEntry(10, SneakAttack),
                     Helpers.CreateLevelEntry(13, SneakAttack),

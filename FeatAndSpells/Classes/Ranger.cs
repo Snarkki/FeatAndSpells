@@ -20,8 +20,7 @@ using Kingmaker.EntitySystem.Stats;
 using Kingmaker.UnitLogic.FactLogic;
 
 namespace FeatAndSpells.Classes {
-    public class Ranger
-    {
+    public class Ranger {
 
 
         public static void ChangeHandler() {
@@ -48,7 +47,8 @@ namespace FeatAndSpells.Classes {
             MasterSpyArchetype.AddFeatures = MasterSpyArchetype.AddFeatures.AppendToArray(
                 Helpers.CreateLevelEntry(1, FreeBootersBane)
                 );
-            }
+        }
+    
             public static void ChangeFreeBooter() {
 
             var lvl5 = KiArrowsFeatureLvl5.GetComponent<WeaponDamageOverride>();

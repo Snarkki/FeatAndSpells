@@ -20,7 +20,7 @@ namespace FeatAndSpells.Classes {
     public class Shaman
     {
         public static void ChangeHandler() {
-            //ModdedWitchDoctor();
+            ModdedWitchDoctor();
             //AddShadowFang();
         }
 
@@ -49,7 +49,7 @@ namespace FeatAndSpells.Classes {
 
             WitchDoctorArchetype.m_ReplaceSpellbook = WitchDoctorSpellBook.ToReference<BlueprintSpellbookReference>();
 
-            WitchDoctorArchetype.RecommendedAttributes = new Kingmaker.EntitySystem.Stats.StatType[] { Kingmaker.EntitySystem.Stats.StatType.Charisma };
+            //WitchDoctorArchetype.RecommendedAttributes = new Kingmaker.EntitySystem.Stats.StatType[] { Kingmaker.EntitySystem.Stats.StatType.Charisma };
 
             WitchDoctorArchetype.AddFeatures = new LevelEntry[] {
                     Helpers.CreateLevelEntry(1, ShamanHexSelection),

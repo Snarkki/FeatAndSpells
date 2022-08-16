@@ -42,12 +42,12 @@ namespace FeatAndSpells.Classes {
             //    };
 
             VivisectionistArchetype.AddFeatures = VivisectionistArchetype.AddFeatures.AppendToArray(
-                Helpers.CreateLevelEntry(1, ScaledFistAcBonus),
+                //Helpers.CreateLevelEntry(1, ScaledFistAcBonus),
                 Helpers.CreateLevelEntry(2, FinesseTraining)
                 );
-            AlchemistClass.Progression.UIGroups = AlchemistClass.Progression.UIGroups.AppendToArray(
-                   Helpers.CreateUIGroup(ScaledFistAcBonus, ScaledFistAcBonus)
-                );
+            //AlchemistClass.Progression.UIGroups = AlchemistClass.Progression.UIGroups.AppendToArray(
+            //       Helpers.CreateUIGroup(ScaledFistAcBonus, ScaledFistAcBonus)
+            //    );
             FASContext.Logger.LogHeader("Changed Alchemist");
         }
     }

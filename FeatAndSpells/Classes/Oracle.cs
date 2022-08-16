@@ -37,15 +37,15 @@ namespace FeatAndSpells.Classes {
                 bp.AddFeatures = new LevelEntry[] {
                     Helpers.CreateLevelEntry(1, PointBlankFeature, PreciseShot),
                     Helpers.CreateLevelEntry(2, WizardFeatSelection, OracleLifeMysteryFeature),
-                    Helpers.CreateLevelEntry(4, FighterFeatSelection, ExtraChannelOracle),
+                    Helpers.CreateLevelEntry(4, ExtraChannelOracle),
                     Helpers.CreateLevelEntry(5, WizardFeatSelection, OracleRevelationSelection),
-                    Helpers.CreateLevelEntry(7, FighterFeatSelection, ExtraChannelOracle),
+                    Helpers.CreateLevelEntry(7, ExtraChannelOracle),
                     Helpers.CreateLevelEntry(10, WizardFeatSelection),
-                    Helpers.CreateLevelEntry(11, ExtraChannelOracle),
-                    Helpers.CreateLevelEntry(13, ExtraChannelOracle),
-                    Helpers.CreateLevelEntry(15, WizardFeatSelection, ExtraChannelOracle),
-                    Helpers.CreateLevelEntry(17, ExtraChannelOracle),
-                    Helpers.CreateLevelEntry(19, ExtraChannelOracle),
+                    //Helpers.CreateLevelEntry(11, ExtraChannelOracle),
+                    //Helpers.CreateLevelEntry(13, ExtraChannelOracle),
+                    Helpers.CreateLevelEntry(15, WizardFeatSelection),
+                   // Helpers.CreateLevelEntry(17, ExtraChannelOracle),
+                   // Helpers.CreateLevelEntry(19, ExtraChannelOracle),
                     Helpers.CreateLevelEntry(20, WizardFeatSelection)
                 };
             });

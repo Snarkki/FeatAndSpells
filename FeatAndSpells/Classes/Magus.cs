@@ -50,11 +50,11 @@ namespace FeatAndSpells.Classes {
             Blueprints.Abilities.UmbralStrike.AddToSpellList(SpellTools.SpellList.MagusSpellList, 7);
             Blueprints.Abilities.FingerOfDeath.AddToSpellList(SpellTools.SpellList.MagusSpellList, 7);
 
-            Blueprints.Abilities.FrightfulAspect.AddToSpellList(SpellTools.SpellList.MagusSpellList, 9);
-            Blueprints.Abilities.Stormbolts.AddToSpellList(SpellTools.SpellList.MagusSpellList, 9);
-            Blueprints.Abilities.RiftOfRuin.AddToSpellList(SpellTools.SpellList.MagusSpellList, 9);
-            Blueprints.Abilities.ShoutGreater.AddToSpellList(SpellTools.SpellList.MagusSpellList, 9);
-            Blueprints.Abilities.PolarRay.AddToSpellList(SpellTools.SpellList.MagusSpellList, 9);
+            Blueprints.Abilities.FrightfulAspect.AddToSpellList(SpellTools.SpellList.MagusSpellList, 8);
+            Blueprints.Abilities.Stormbolts.AddToSpellList(SpellTools.SpellList.MagusSpellList, 8);
+            Blueprints.Abilities.RiftOfRuin.AddToSpellList(SpellTools.SpellList.MagusSpellList, 8);
+            Blueprints.Abilities.ShoutGreater.AddToSpellList(SpellTools.SpellList.MagusSpellList, 8);
+            Blueprints.Abilities.PolarRay.AddToSpellList(SpellTools.SpellList.MagusSpellList, 8);
 
             Blueprints.Abilities.HeroicInvocation.AddToSpellList(SpellTools.SpellList.MagusSpellList, 9);
             Blueprints.Abilities.OverwhelmingPresence.AddToSpellList(SpellTools.SpellList.MagusSpellList, 9);
@@ -64,21 +64,7 @@ namespace FeatAndSpells.Classes {
 
             SwordSaintArcheType.m_ReplaceSpellbook = SpellBooks.EldritchScionSpellbook.ToReference<BlueprintSpellbookReference>();
 
-            SwordSaintArcheType.AddFeatures = SwordSaintArcheType.AddFeatures.AppendToArray(
-                Helpers.CreateLevelEntry(1, SneakAttack, PointBlankFeature, PreciseShot, SpellPenetration, GreaterSpellPenetration, ScaledFistAcBonus),
-                Helpers.CreateLevelEntry(3, SneakAttack),
-                Helpers.CreateLevelEntry(5, SneakAttack),
-                Helpers.CreateLevelEntry(7, SneakAttack),
-                Helpers.CreateLevelEntry(9, SneakAttack),
-                Helpers.CreateLevelEntry(11, SneakAttack),
-                Helpers.CreateLevelEntry(13, SneakAttack),
-                Helpers.CreateLevelEntry(15, SneakAttack),
-                Helpers.CreateLevelEntry(17, SneakAttack),
-                Helpers.CreateLevelEntry(19, SneakAttack)
-                );
-            MagusClass.Progression.UIGroups = MagusClass.Progression.UIGroups.AppendToArray(
-                   Helpers.CreateUIGroup(SneakAttack)
-                );
+
             FASContext.Logger.LogHeader("Changed SwordSaint");
         }
     }

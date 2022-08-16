@@ -26,6 +26,11 @@ namespace FeatAndSpells.Classes {
         private static void BuffLeyLine() {
             LeyLineGuardian.RemoveFeatures = new LevelEntry[] { };
 
+            LeyLineGuardian.AddFeatures = LeyLineGuardian.AddFeatures.AppendToArray(
+                Helpers.CreateLevelEntry(1, SpellPenetration, RangedLegerdemainFeature, PointBlankShot),
+                Helpers.CreateLevelEntry(3, GreaterSpellPenetration)
+            );
+
             var comp = Progressions.WitchShadowPatronProgression.GetComponents<AddSpellsToDescription>().First();
             comp.m_Spells = new BlueprintAbilityReference[] {
                 Blueprints.Abilities.Vanish.ToReference<BlueprintAbilityReference>(),
